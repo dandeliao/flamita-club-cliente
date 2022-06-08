@@ -1,0 +1,255 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color:rgb(54, 43, 54);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button {
+    font-size: 100%;
+    line-height: 1;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    cursor: pointer;  
+    -webkit-appearance: textfield;
+}
+
+.container {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    background-color:rgb(197, 181, 194);
+}
+
+.avatar {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: mediumorchid;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 3.25em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    color: black;
+}
+
+.navbar .avatar {
+    cursor: pointer;
+    width: 2.8em;
+    height: 2.8em;
+}
+
+.navbar #espacim {
+    width: 3em;
+    height: 3em;
+}
+
+.navbar .avatar:hover {
+    transform: scale(1.2);
+    transition: 0.15s;
+}
+
+.hero {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.hero-content {
+    width: 100%
+}
+
+.player {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+audio {
+    width: 100%;
+    background-color: rgb(158, 129, 114);
+}
+
+#np {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items:center;
+    gap: 0.5em;
+    padding-left: 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#adicionar {
+    display: block;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 4px;
+}
+
+#adicionar:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.15s;
+}
+
+#lista-de-musicas {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 0.75em;
+    margin-top: 0.75em;
+    width: 100%;
+    min-height: 22em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#lista-de-musicas .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75em;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.item-escuro {
+    background-color: rgba(0,0,0,0.25);
+}
+
+.item-carregando {
+    height: 1.5em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.span-musica-na-lista {
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+.item img {
+    cursor:default;
+}
+
+.musica-atual {
+    background-color: black;
+    color: whitesmoke;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: mediumorchid;
+    font-size: 13px;
+    text-align: center;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 100em;
+    height: 75%;
+    max-height: 100em;
+    z-index: 2000;
+    background-color: whitesmoke;
+}
+
+.modal-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modal-header {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.modal-header button {
+    width: 2.5em;
+    height: 2.5em;
+    cursor: pointer;
+}
+
+.modal-header button:hover {
+    background-color: mediumorchid;
+    transition: 0.1s;
+}
+
+.overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 3.25em;
+    left: 100%;
+    transform: translate(-12.5em, 0);
+    background-color: whitesmoke;
+    width: 12em;
+    height: 9em;
+    padding: 0.5em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
+
+.dropdown button {
+    height: 3em;
+}
+
+.closed {
+    display: none;
+}

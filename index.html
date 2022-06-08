@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Flama Club</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <div id="espacim"></div>
+            <div>✶ flama club ✶</div>
+            <img class="avatar" id="perfil" alt="perfil" src="avatar.png">
+        </nav>
+    
+        <div class="hero">
+            <img class="hero-content" id="img-hero" alt="foto da flama" src="flamita.jpg">
+        </div>
+    
+        <div class="player">
+            <audio controls id="youtube"></audio>
+            <div id="np">
+                <img class="avatar" id="np-pessoa" alt="avatar" src="avatar.png">
+                <p id="np-musica">nenhuma música tocando</p>
+            </div>
+        </div>
+    
+        <button id="adicionar">+ nova música</button>
+    
+        <div id="lista-de-musicas"></div>
+    
+        <footer>
+            powered by Alimentos de Alta Gama ™
+        </footer>
+    
+        <div class="modal" id="modal-login">
+            <div class="modal-header" id="login-header">
+                <button id="fechar-login">X</button>
+            </div>
+            <div class="modal-content" id="login-content">
+                <h2>entrar</h2>
+                <form id="form-login">
+                    <label for="nome">nome:</label>
+                    <input type="text" id="nome-login" placeholder="nome de usuárie" name="nome" required>
+                    <br>
+                    <br>
+                    <label for="senha">senha:</label>
+                    <input type="password" id="senha-login" placeholder="sua senha" name="senha" required>
+                    <br>
+                    <br>
+                    <button type="submit">entrar</button>
+                </form>
+                <br>
+                <div>
+                    <span>não tem conta?</span>
+                    <button id="abrir-cadastro">cadastre-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="modal-overlay"></div>
+    
+        <div class="dropdown" id="dropdown">
+            <button id="trocar-foto">trocar foto</button>
+            <input type="file" id="input-avatar" accept="image/*" style="display:none">
+            <button id="logout">sair</button>
+        </div>
+        <div class="overlay" id="dropdown-overlay"></div>
+    
+        <div class="modal" id="modal-adicionar">
+            <div class="modal-header" id="adicionar-header">
+                <button id="fechar-adicionar">X</button>
+            </div>
+            <div class="modal-content" id="adicionar-content">
+                <h2>adicionar música</h2>
+                <form id="form-adicionar">
+                    <div>
+                        <label for="link">link do youtube:</label>
+                        <input type="text" id="link" placeholder="ex: https://youtu.be/aBcDx" name="link" required>
+                        <br>
+                        <br>
+                        <label for="titulo">título da música:</label>
+                        <input type="text" id="titulo" placeholder="ex: Pan Dulce (remix)" name="titulo" required>
+                        <br>
+                        <br>
+                        <label for="artista">artista(s):</label>
+                        <input type="text" id="artista" placeholder="ex: Flamita & Los Cogollos" name="artista" required>
+                        <br>
+                        <br>
+                        <br>
+                        <button type="submit">adicionar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="overlay" id="adicionar-overlay"></div>
+    
+        <div class="modal" id="modal-cadastro">
+            <div class="modal-header" id="cadastro-header">
+                <button id="fechar-cadastro">X</button>
+            </div>
+            <div class="modal-content" id="cadastro-content">
+                <h2>Criar a sua conta</h2>
+                <br>
+                <form id="form-cadastro">
+                    <div>
+                        <label for="nome">nome:</label>
+                        <input type="text" id="nome-cadastro" placeholder="nome de usuárie" name="nome" required>
+                        <br>
+                        <br>
+                        <label for="senha">senha:</label>
+                        <input type="password" id="senha-cadastro" placeholder="sua senha" name="senha" required>
+                        <br>
+                        <br>
+                        <label for="senha2">confirme a senha:</label>
+                        <input type="password" id="senha2-cadastro" placeholder="sua senha" name="senha2" required>
+                        <br>
+                        <br>
+                        <br>
+                        <button type="submit">cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="overlay" id="cadastro-overlay"></div>
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+</html>
