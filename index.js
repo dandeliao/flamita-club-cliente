@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', e => {
                 botaoPerfil.src = `${servidor}/avatar/${avatar}`;
             });    
         } else {
-            toggleModal(modalLogin, modalOverlay);
+            //toggleModal(modalLogin, modalOverlay);
         }
         carregarMusicas().then((am) => {
             musicaAtual = 0;
