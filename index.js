@@ -20,7 +20,7 @@ let cadastroOverlay = document.getElementById('cadastro-overlay');
 let fecharCadastro = document.getElementById('fechar-cadastro');
 let abrirCadastro = document.getElementById('abrir-cadastro');
 
-const servidor = 'http://localhost:5000';
+const servidor = 'http://159.223.215.28:3000';
 
 let arrayMusicas = [];
 let listaAleatoria = [];
