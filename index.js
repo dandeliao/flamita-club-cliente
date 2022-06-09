@@ -39,16 +39,19 @@ document.addEventListener('DOMContentLoaded', e => {
     toggleModal(modalCadastro, cadastroOverlay);
     // fecha modal adicionar música, que começa aberto
     toggleModal(modalAdicionar, adicionarOverlay);
+    // fecha modal de login, que começa aberto
+    toggleModal(modalLogin, modalOverlay);
     // verifica se pessoa já está logada
     dadosMeus().then(r => {
         if(r.logade === true) {
         estado.logade = true;
         estado.pessoa = r.dados.nome;
-        toggleModal(modalLogin, modalOverlay);
         encontrarAvatar(r.dados.nome)
             .then(avatar => {
                 botaoPerfil.src = `${servidor}/avatar/${avatar}`;
             });    
+        } else {
+            toggleModal(modalLogin, modalOverlay);
         }
         carregarMusicas().then((am) => {
             musicaAtual = 0;
